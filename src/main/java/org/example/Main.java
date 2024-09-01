@@ -34,8 +34,12 @@ public class Main {
 
         List<Integer> lt= Arrays.asList(10,3,8,8);
        //sum using stream and reduce.
-       int sum1=lt.stream().reduce(0,(a,b)->a+b);
-       int sum= lt.stream().reduce(0,SumCal::add);
+//       int sum1=lt.stream().reduce(0,(a,b)->a+b);
+//       int sum= lt.stream().reduce(0,SumCal::add);
+
+        int sum1=lt.stream().reduce(0,SumCal::add);
+
+        int sum2=lt.stream().reduce(0,(a,b)->a+b);
 
        List<Integer> squre=lt.stream().map(x->x*x).toList();
        //or
